@@ -53,25 +53,17 @@ function generatePassword() {
 
 // 2- Búsqueda del Más Viejo
 function findTheOldest() {
-    const array = document.getElementById("array").value.split(",");
-    const resultado = document.getElementById("resultado");
+    let personas = document.getElementById('personas').value;
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = '';
 
-    resultado.innerHTML = "";
+    let personasFormateadas = JSON.parse(personas);
 
-    for (let i = 0; i < array.length; i++) {
-        array[i] = array[i].trim();
-    }
-
-    let masViejo = [array[0], Number(array[1])];
-
-    for (let i = 2; i < array.length; i += 2) {
-        if (masViejo[1] < Number(array[i + 1])) {
-            masViejo[0] = array[i];
-            masViejo[1] = Number(array[i + 1]);
-        }
-    }
+    let personaMasVieja = personasFormateadas.reduce((oldest, persona) => {
+        return (oldest.edad || 0) > persona.edad ? oldest : persona;
+    }, {});
 
     const p = document.createElement('p');
-    p.textContent = `La persona más vieja es ${masViejo[0]} con ${masViejo[1]} años.`;
+    p.textContent=`${personaMasVieja.nombre} es la más vieja con ${personaMasVieja.edad} años`;
     resultado.appendChild(p);
 }

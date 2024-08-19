@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TA1_2</title>
     <script defer src="scriptTA1.js"></script>
 </head>
+
 <body>
-    <label>Ingrese arreglo con comas: </label>
-    <input type="text" id="array">
-    <br><br>
-    <label>Ingrese item a remover: </label>
-    <input type="text" id="item">
-    <br><br>
-    <button id="remover" onclick="removeFromArray()">Remover</button>
-    <br><br>
-    <div id="resultado"></div>
-    <br><br>
-    <label>Ingrese libros (titulo , autor): </label>
-    <input type="text" id="libros">
-    <br><br>
-    <button id="remover" onclick="getTheTitles()">Mostrar Títulos</button>
-    <br><br>
-    <div id="resultado1"></div>
+    <div class="remover">
+        <label>Ingrese arreglo con comas: </label>
+        <input type="text" id="array">
+        <br><br>
+        <label>Ingrese item a remover: </label>
+        <input type="text" id="item">
+        <button onclick="removeFromArray()">Remover</button>
+        <div id="resultado"></div>
+    </div>
+
+    <div class="libros">
+        <label>Libros ("titulo" : "titulo", "autor" : "autor"):</label>
+        <textarea type="text" id="libro"></textarea>
+        <button onclick="getTheTitles()">Titulos</button>
+    </div>
 </body>
+
 </html>

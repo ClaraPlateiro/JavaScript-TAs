@@ -7,11 +7,9 @@
     <script defer src="scriptTA3.js"></script>
 </head>
 <body>
-    <label>Ingrese personas (nombre, edad) separadas por comas: </label>
-    <input type="text" id="array">
-    <br><br>
-    <button id="encontrar" onclick="findTheOldest()">Encontrar persona más vieja</button>
-    <br><br>
+    <label>Ingrese las personas como un array de objetos [{"nombre":"nombre", "edad":"edad"}]:</label>
+    <textarea type="text" id="personas"></textarea>
+    <button id="masViejo" onclick="findTheOldest()">Buscar el má Viejo</button>
     <div id="resultado"></div>
 </body>
 </html>

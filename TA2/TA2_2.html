@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TA2_2</title>
     <script defer src="scriptTA2.js"></script>
 </head>
+
 <body>
-    <label>Ingrese los grados celsius: </label>
-    <input type="number" id="celsius">
-    <br><br>
-    <button id="suma" onclick="convertToCelsius()">Convertir Celsius a Fahrenheit</button>
-    <br><br>
-    <div id="resultado1"></div>
-    <br><br>
-    <label>Ingrese los grados fahrenheit: </label>
-    <input type="number" id="fahrenheit">
-    <br><br>
-    <button id="suma" onclick="convertToFahrenheit()">Convertir Fahrenheit a Celsius</button>
-    <br><br>
-    <div id="resultado2"></div>
+    <div class="celsiusAFahrenheit">
+        <label>Ingrese los grados Celsius: </label>
+        <input type="number" id="celsius">
+        <br><br>
+        <button onclick="convertToFahrenheit()">Convertir Celsius a Fahrenheit</button>
+        <br><br>
+        <div id="resultado1"></div>
+    </div>
+
+    <div class="Fahrenheit">
+        <label>Ingrese los grados Fahrenheit: </label>
+        <input type="number" id="Fahrenheit">
+        <br><br>
+        <button onclick="convertToCelsius()">Convertir Fahrenheit a Celsius</button>
+        <br><br>
+        <div id="resultado2"></div>
+    </div>
 </body>
+
 </html>

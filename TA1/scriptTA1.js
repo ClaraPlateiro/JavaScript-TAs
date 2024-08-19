@@ -46,24 +46,14 @@ function removeFromArray(){
     resultado.textContent = `Arreglo resultante: ${arreglo.join(', ')}`;
 }
 
-function getTheTitles(){
-    let arreglo = document.getElementById("libros").value.split(',');
-    const resultado = document.getElementById("resultado1");
-    let titulos = [];
-    let n = 0; 
-
-    resultado.innerHTML = "";
-
-    for (let i = 0; i < arreglo.length; i += 2) {
-        titulos[n] = arreglo[i].trim();
-        n++;
-    }
-
-    for (let x = 0; x < titulos.length; x++) {
-        const h1 = document.createElement('h1');
-        h1.textContent = titulos[x];
-        resultado.appendChild(h1);
-    }
+function getTheTitles() {
+    let libros = document.getElementById('libro').value;
+    let resultado = document.getElementById('resultado3');
+    
+    let libroFormateado = JSON.parse(libros);
+    const h1 = document.createElement('h1');
+    h1.textContent=libroFormateado.map(libro => libro.titulo);
+    resultado.appendChild(h1);
 }
 
 // 3- Filtrado y Transformación

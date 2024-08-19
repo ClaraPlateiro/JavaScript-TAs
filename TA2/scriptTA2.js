@@ -25,26 +25,30 @@ function sumaAll(){
 }
 
 // 2- Conversión de Temperatura
-function convertToCelsius(){
+function convertToFahrenheit(){
     const celsius = Number(document.getElementById("celsius").value);
     const resultado1 = document.getElementById("resultado1");
 
     resultado1.innerHTML = "";
 
-    const fahrenheit = (celsius*(9/5)+32);
+    let fahrenheit = (celsius*(9/5)+32);
+
+    fahrenheit = fahrenheit.toFixed(1);
 
     const p = document.createElement('p');
     p.textContent= `${celsius} grados Celsius = ${fahrenheit} grados Fahrenheit`;
     resultado1.appendChild(p);
 }
 
-function convertToFahrenheit(){
+function convertToCelsius(){
     const fahrenheit = Number(document.getElementById("fahrenheit").value);
     const resultado2 = document.getElementById("resultado2");
 
     resultado2.innerHTML = "";
 
-    const celsius = ((fahrenheit-32)*(5/9));
+    let celsius = ((fahrenheit-32)*(5/9));
+
+    celsius = celsius.toFixed(1);
 
     const p = document.createElement('p');
     p.textContent= `${fahrenheit} grados Fahrenheit = ${celsius} grados Celsius`;
