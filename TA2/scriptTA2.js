@@ -1,5 +1,4 @@
 // 1- Suma de rangos
-
 function sumaAll(){
     const num1 = Number(document.getElementById("numero1").value);
     const num2 = Number(document.getElementById("numero2").value);

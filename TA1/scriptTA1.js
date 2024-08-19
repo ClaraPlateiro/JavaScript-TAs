@@ -16,8 +16,8 @@ function repeatString(){
 
 function reverseString(){
 
-    const textoIngresado = document.getElementById("texto").value;
-    const resultado = document.getElementById("resultado");
+    const textoIngresado = document.getElementById("texto1").value;
+    const resultado = document.getElementById("resultado1");
 
     resultado.innerHTML = "";
 
@@ -48,7 +48,7 @@ function removeFromArray(){
 
 function getTheTitles(){
     let arreglo = document.getElementById("libros").value.split(',');
-    const resultado = document.getElementById("resultado");
+    const resultado = document.getElementById("resultado1");
     let titulos = [];
     let n = 0; 
 
@@ -133,7 +133,4 @@ function duplicates(){
         resultado.appendChild(h4);
         resultado.appendChild(p);
     }
-
-
-
 }
