@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA1_1</title>
+    <script defer src="scriptTA3_3.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Repetir texto</h2>
+    <div class="textoRepetido">
+        <label for="texto">Ingrese su texto:</label>
+        <input type="text" id="texto">
+        <br><br>
+        <label for="repeticiones">Ingrese cantidad de repeticiones:</label>
+        <input type="number" id="repeticiones">
+        <br><br>
+        <button onclick="repeatString()">Procesar</button>
+        <br><br>
+        <div id="resultado"></div>
+        <br><br>
+    </div>
+
+    <h2>Invertir texto</h2>
+    <div class="textoInvertido">
+        <label for="texto1">Ingrese el texto que quiere invertir:</label>
+        <input type="text" id="texto1">
+        <br><br>
+        <button onclick="reverseString()">Invertir Texto</button>
+        <br><br>
+        <div id="resultado1"></div>
+        <br><br>
+    </div>
+
+    <h2>Remover item</h2>
+    <div class="remover">
+        <label>Ingrese array con comas: </label>
+        <input type="text" id="array">
+        <br><br>
+        <label>Ingrese item a remover: </label>
+        <input type="text" id="item">
+        <br><br>
+        <button onclick="removeFromArray()">Remover</button>
+        <br><br>
+        <div id="resultado2"></div>
+        <br><br>
+        <p>Ejemplo de como ingresar el array: Hola, Chau, Adiós</p>
+        <br><br>
+    </div>
+
+    <h2>Títulos de libros</h2>
+    <div class="libros">
+        <label>Libros ("titulo" : "titulo", "autor" : "autor"):</label>
+        <textarea type="text" id="libro"></textarea>
+        <br><br>
+        <button onclick="getTheTitles()">Titulos</button>
+        <br><br>
+        <div id="resultado3"></div>
+        <br><br>
+        <p>Ejemplo de como ingresarlo: [{"titulo": "Volver a empezar", "autor": "Colleen Hoover"}, {"titulo": "La chica de nieve", "autor":"Javier Castillo"}]</p>
+        <br><br>
+    </div>
+
+    <h2>Números impares</h2>
+    <div class="impares">
+        <label>Ingrese array de numeros separado por comas: </label>
+        <input type="text" id="array1">
+        <br><br>
+        <button id="mostrar" onclick="getOdds()">Mostrar impares</button>
+        <br><br>
+        <div id="resultado4"></div>
+        <br><br>
+        <p>Ejemplo de como ingresar el array: 1,2,4,5,7</p>
+        <br><br>
+    </div>
+
+    <h2>Elementos repetidos</h2>
+    <div class="repetidos">
+        <label>Ingrese elementos separado por comas: </label>
+        <input type="text" id="elementos">
+        <br><br>
+        <button id="repetidos" onclick="duplicates()">Mostrar elementos repetidos</button>
+        <br><br>
+        <div id="resultado5"></div>
+        <br><br>
+        <p>Ejemplo de como ingresar el array: hola, chau, hola, hola, chau, buenas noches</p>
+        <br><br>
+    </div>
+
+    <h2>Suma de rango entre dos números</h2>
+    <div class="sumaRango">
+        <label>Ingrese el primer número: </label>
+        <input type="number" id="numero1">
+        <br><br>
+        <label>Ingrese el segundo número: </label>
+        <input type="number" id="numero2">
+        <br><br>
+        <button id="suma" onclick="sumaAll()">Sumar</button>
+        <br><br>
+        <div id="resultado6"></div>
+        <br><br>
+    </div>
+
+    <h2>Celsius a Fahrenheit</h2>
+    <div class="celsiusAFahrenheit">
+        <label>Ingrese los grados Celsius: </label>
+        <input type="number" id="celsius">
+        <br><br>
+        <button onclick="convertToFahrenheit()">Convertir Celsius a Fahrenheit</button>
+        <br><br>
+        <div id="resultado7"></div>
+        <br><br>
+    </div>
+
+    <h2>Fahrenheit a Celsius</h2>
+    <div class="FahrenheitACelsius">
+        <label>Ingrese los grados Fahrenheit: </label>
+        <input type="number" id="fahrenheit">
+        <br><br>
+        <button onclick="convertToCelsius()">Convertir Fahrenheit a Celsius</button>
+        <br><br>
+        <div id="resultado8"></div>
+        <br><br>
+    </div>
+
+    <h2>¿Es un año bisiesto?</h2>
+    <div class="esBisiesto">
+        <label>Ingrese el año: </label>
+        <input type="number" id="año">
+        <br><br>
+        <button id="bisiesto" onclick="leapYears()">Determinar</button>
+        <br><br>
+        <div id="resultado9"></div>
+        <br><br>
+    </div>
+
+    <h2>Suma de numeros en array</h2>
+    <div class="sumaNum">
+        <label>Ingrese los números separados por una coma: </label>
+        <input type="text" id="array2">
+        <br><br>
+        <button id="suma" onclick="getSum()">Sumar</button>
+        <br><br>
+        <div id="resultado10"></div>
+        <br><br>
+        <p>Ejemplo de como ingresar el array: 1,2,4,5,7</p>
+        <br><br>
+    </div>
+
+    <h2>Generar contraseña</h2>
+    <div class="generarContraseña">
+        <label>Ingrese longitud de contraseña: </label>
+        <input type="number" id="largo">
+        <br><br>
+        <button id="contraseña" onclick="generatePassword()">Generar contraseña</button>
+        <br><br>
+        <div id="resultado11"></div>
+        <br><br>
+    </div>
+
+    <h2>Encontrar persona más vieja</h2>
+    <div class="personaMasVieja">
+        <label>Ingrese las personas como un array de objetos [{"nombre":"nombre", "edad":"edad"}]:</label>
+        <textarea type="text" id="personas"></textarea>
+        <br><br>
+        <button id="masViejo" onclick="findTheOldest()">Buscar el más Viejo</button>
+        <br><br>
+        <div id="resultado12"></div>
+        <br><br>
+        <p>Ejemplo de como ingresarlo: [{"nombre": "Clara", "edad": "20"}, {"nombre": "Bruno", "edad":"15"}]</p>
+        <br><br>
+    </div>
+</body>
+
+</html>
